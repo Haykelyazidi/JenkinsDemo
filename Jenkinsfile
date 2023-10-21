@@ -21,8 +21,7 @@ pipeline {
             steps {
                 script{
                 sh 'mvn clean test '
-                testNG reportFilenamePattern: '**/testng.xml'
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/surefire-reports/reporthayjek*.html', reportFiles: 'target/surefire-reports/reporthay*.html', reportName: 'HTML HAYKEL Report', reportTitles: '', useWrapperFileDirectly: true])            }
-        }}
+                testNG reportFilenamePattern: 'target/surefire-reports/testng-results.xml'
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'target/surefire-reports/Extend*.html', reportName: 'HTML HAYKEL Report', reportTitles: '', useWrapperFileDirectly: true])        }}
     }
 }
