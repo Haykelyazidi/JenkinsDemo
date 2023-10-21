@@ -25,7 +25,7 @@ pipeline {
       stage('test') {
             steps {
                 script{
-                sh 'mvn clean test '
+                sh 'mvn clean test -Dbrowser=localchrome'
                 testNG reportFilenamePattern: 'target/surefire-reports/testng-results.xml'
                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'target/surefire-reports/Extend*.html', reportName: 'HTML HAYKEL Report', reportTitles: '', useWrapperFileDirectly: true])        }}
     }
