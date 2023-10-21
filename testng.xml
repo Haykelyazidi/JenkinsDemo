@@ -4,7 +4,7 @@
     <listeners >
         <listener class-name="main.java.ExtentReport"></listener>
     </listeners>
-    <parameter name="browser" value="localchrome"></parameter>
+    <parameter name="browser" value="C:\chromedriver\chromedriver.exe"></parameter>
     <test name="Testing Basics">
         <classes>
             <class name="com.autoamtiononthego.SeleniumTest"/>
